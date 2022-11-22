@@ -7,4 +7,8 @@ function changeCard(event) {
 	isIgnite = !isIgnite;
 
 	card.style.background = `url(./assets/bg-${bgImage}.svg)`;
+	card.classList.add("appear");
+	card.addEventListener("animationend", () => {
+		card.classList.remove("appear");
+	});
 }
