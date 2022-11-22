@@ -1,0 +1,78 @@
+/* Reset styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body * {
+	font-family: "Roboto";
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(150deg, #0f2b05, #090909);
+}
+
+header {
+	padding: 75px 0;
+	text-align: center;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 354px;
+	height: 508px;
+	background-image: url(./assets/bg-ignite.svg);
+	cursor: pointer;
+	user-select: none;
+
+	opacity: 0;
+	transform: translateY(-150px);
+	animation: appear 0.4s forwards;
+}
+
+.card>img {
+	object-fit: cover;
+	width: 170px;
+	height: 170px;
+	border-radius: 50%;
+	border: #F7DD43 solid 4px;
+	pointer-events: none;
+
+}
+
+.info {
+	color: white;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: -75px;
+}
+
+.info .name {
+	font-weight: bold;
+	line-height: 140%;
+	font-size: 18px;
+}
+
+.info .title {
+	font-size: 14px;
+	line-height: 160%;
+}
+
+
+@keyframes appear {
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
